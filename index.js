@@ -38,67 +38,110 @@ function esPrimo (num){
   return true;
  }
 
-// //MIX
-// function ordenarArray (arr){
-//    return arr.sort(function (a,b){
-//     return b - a;
-//    });
-// }
+//MIX
+//10
+ function ordenarArray (arr){
+  return arr.sort(function (a,b){
+  return b - a;
+  });
+ }
 
+//11
+ function obtenerPares(arr) {
+  return arr.filter((number) => number % 2 === 0);
+}
+//12
+function pintarArray (array){
+   let resultado = array[0].toString();
 
-// function obtenerPares(arr) {
-//   return arr.filter((number) => number % 2 === 0);
-// }
+     for (let i = 1; i < array.length; i++) {
+    resultado += ", " + array[i].toString();
+  }
+  return "[" + resultado + "]";
+}
 
+pintarArray([0, 1, 2]);
+
+//13
+function arrayMapi (array,funcion){
+   let arrayFuncion =[];
+   for (let i=0; i<array.length; i++){
+         arrayFuncion[i] = funcion(array[i]);
+    }
+    return arrayFuncion;
+   }
+//14
+function eliminarDuplicados(array) {
+    let nuevoArray = [];
+    for (i = 0; i < array.length; i++) {
+        if (!nuevoArray.includes(array[i])) {
+          nuevoArray.push(array[i]);
+        }
+    }
+    return nuevoArray;
+  }
 // //PROYECTO
 // //ARRAYS
-// let arrayNumerosNeg =[0, -1, -2, -3, -4, -5, -6, -7, -8, -9];
-// let holaMundo = ["Hola", "Mundo"];
-// let loGuardoTodo = ["hola", "que", 23, 42.33, "tal"];
-// let arrayDeArrays =[
-//   [756, "Lucía"],
-//   [225, "Aroca"],
-//   [298, "Oviedo"]
-// ];
-// //FUNCIONES
+//15
+let arrayNumerosNeg =[0, -1, -2, -3, -4, -5, -6, -7, -8, -9];
+//16
+ let holaMundo = ["Hola", "Mundo"];
+//17
+ let loGuardoTodo = ["hola", "que", 23, 42.33, "tal"];
+//18
+ let arrayDeArrays =[
+  [756, "nombre"],
+  [225, "apellido"],
+  [298, "direccion"]
+ ];
+//FUNCIONES
+//19
+function multiplicacion (a,b){
+  return a * b
+ };
+//20
+ function division (a,b){
+   return a/b
+ };
+  //21
+ function esPar(num) {
+  if (num % 2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+//22
+function resta(a, b) {
+  return a - b;
+}
+arrayFunciones = [suma, resta, multiplicacion];
+  
 
-// function multiplicacion (a,b){
-//   return a * b
-// };
-// function division (a,b){
-//   return a/b
-// };
-// function esPar (num){
-//   if(num % 2 === 0){return true},
-//   else {return false};
-// };
-
-// let arrayFunciones = [
-//   function suma (a,b) {return a + b},
-//   function resta (a,b) {return a - b},
-//   function multiplicacion (a,b) {return a * b};
-// ]; //¿¿¿¿¿¿
-
-// //MIX ARRAY FUNCIONES
-// function ordenarArray2 (arr){
-//   return arr.sort (function (a,b){return b - a})
-// }
-
-// function obtenerImpares (arr){
-//   return arr.filter ((number)=> number % 2 !== 0);
-// }
-
-// function sumarArray (arr) {let sumaTotal = 0;
-//   for (let i = 0; i < arr.length; i++) {
-//     sumaTotal += arr[i];
-//   }
-//   return sumaTotal;
-// }
-
-// function multiplicarArray (arr) {
-//   let multiplicacionTotal = 1;
-//   for (i=0; i< arr.length; i++){
-//     multiplicacionTotal *= arr[i];
-//   }
-//  return multiplicacionTotal
-// };
+//MIX ARRAY FUNCIONES
+//23
+ function ordenarArray2 (arr){
+  return arr.sort (function (a, b){
+  return b - a;
+   })
+ }
+//24
+ function obtenerImpares (arr){
+ return arr.filter ((number)=> number % 2 !== 0);
+ }
+//25
+ function sumarArray (arr) {
+  let sumaTotal = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sumaTotal += arr[i];
+  }
+  return sumaTotal;
+ }
+//26
+function multiplicarArray(arr) {
+  let multiTotal = 1;
+  for (let i = 0; i < arr.length; i++) {
+    multiTotal *= arr[i];
+  }
+  return multiTotal;
+}
